@@ -1,0 +1,14 @@
+{
+  "name": "allendragtable",
+  "version": "1.0.3",
+  "description": "js plugin",
+  "main": "dragtable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "allen",
+  "license": "ISC"
+}
