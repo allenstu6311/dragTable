@@ -184,10 +184,11 @@ function DragTable(id, settings) {
 
     //檢查class名稱
     function checkClass(className) {
+        if(!className) return;
         if (typeof className == "string" || typeof className == "number") {
             return true
         }
-        console.warn("class參數只能式字串或數字")
+        console.warn("class參數只能式字串或數字");
         return false
     }
 

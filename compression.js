@@ -96,6 +96,10 @@ function DragTable(id, settings) {
                 data.splice(beforeDragIndex, 1);
                 data.splice(afterDragIndex, 0, temp);
             }
+
+            if (isFunction(params.drop)) {
+                params.drop(data);
+            }
         }
     });
 
@@ -169,6 +173,7 @@ function DragTable(id, settings) {
     }
 
     function checkClass(className) {
+        if(!className) return;
         if (typeof className == "string" || typeof className == "number") {
             return true;
         }
