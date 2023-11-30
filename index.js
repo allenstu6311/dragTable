@@ -176,6 +176,7 @@ function DragTable(id, settings) {
 
     //檢查是否為function
     function isFunction(func) {
+        if(!func) return;
         if (typeof func == "function") {
             return true
         }

@@ -165,6 +165,7 @@ function DragTable(id, settings) {
     }
 
     function isFunction(func) {
+        if(!func) return;
         if (typeof func == "function") {
             return true;
         }
