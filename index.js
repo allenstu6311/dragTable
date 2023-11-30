@@ -109,6 +109,7 @@ function DragTable(id, settings) {
     function addDragRow(row) {
         dragElem = row.cloneNode(true);
         if (checkClass(params.dragClass)) {
+            
             dragElem.classList.add(`${params.dragClass}`);
         }
         let currPos = currentRow.getBoundingClientRect();
