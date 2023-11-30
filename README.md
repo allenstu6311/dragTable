@@ -7,19 +7,20 @@ https://allenstu6311.github.io/dragTable/
 
 
 # dragTable
+## npm
 <pre>
 <code>
 npm install allendragtable 
 </code>
 </pre>
-
+## cdn
 <pre>
 <code>
 https://cdn.jsdelivr.net/gh/allenstu6311/dragTable/cdn.js
 </code>
 </pre>
 
-# Init
+# Guide
 <pre>
 <code>
      var data = [
