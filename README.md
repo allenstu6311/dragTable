@@ -6,7 +6,7 @@ https://allenstu6311.github.io/dragTable/
 </pre>
 
 
-# dragTable
+# DragTable
 ## npm
 <pre>
 <code>
