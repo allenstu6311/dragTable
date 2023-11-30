@@ -9,7 +9,7 @@ function DragTable(id, settings) {
     let thead = document.querySelector(`#${id}\t thead`);
     let rows = [];
     let currentRow = null;
-    let dragElem = null ;
+    let dragElem = null;
     let mouseDownX = 0;
     let mouseDownY = 0;
     let mouseX = 0;
@@ -104,10 +104,25 @@ function DragTable(id, settings) {
     });
 
     function addDragRow(row) {
+        // console.log('row',row)
         dragElem = row.cloneNode(true);
         if (checkClass(params.dragClass)) {
             dragElem.classList.add(`${params.dragClass}`);
         }
+        dragElem.style.width = getStyle(row, 'width');
+        dragElem.style.height = getStyle(row, 'height');
+        dragElem.style.background = getStyle(row, 'backgroundColor');
+
+        for (let i = 0; i < row.children.length; i++) {
+            let td = row.children[i];
+            let cloneTd = dragElem.children[i];
+
+            cloneTd.style.width = getStyle(td, "width");
+            cloneTd.style.height = getStyle(td, "height");
+            cloneTd.style.padding = getStyle(td, "padding");
+            cloneTd.style.margin = getStyle(td, "margin");
+        }
+
         let currPos = currentRow.getBoundingClientRect();
 
         tbody.appendChild(dragElem);
@@ -165,7 +180,7 @@ function DragTable(id, settings) {
     }
 
     function isFunction(func) {
-        if(!func) return;
+        if (!func) return;
         if (typeof func == "function") {
             return true;
         }
@@ -174,12 +189,18 @@ function DragTable(id, settings) {
     }
 
     function checkClass(className) {
-        if(!className) return;
+        if (!className) return;
         if (typeof className == "string" || typeof className == "number") {
             return true;
         }
         console.warn("class參數只接受字串或數字");
         return false;
+    }
+
+    function getStyle(target, styleName) {
+        let styleList = window.getComputedStyle(target);
+        let style = styleList[styleName];
+        return style ? style : null;
     }
 
     function initTable(data) {
