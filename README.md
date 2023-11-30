@@ -16,7 +16,7 @@ npm install allendragtable
 ## cdn
 <pre>
 <code>
-https://cdn.jsdelivr.net/gh/allenstu6311/dragTable/cdn.js
+https://cdn.jsdelivr.net/gh/allenstu6311/dragTable@master/cdn.js
 </code>
 </pre>
 
