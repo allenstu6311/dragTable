@@ -16,6 +16,13 @@ https://cdn.jsdelivr.net/gh/allenstu6311/dragTable/cdn.js
 # Init
 <pre>
 <code>
+     var data = [
+        { id: 1, name: 'Alice', age: 25 },
+        { id: 2, name: 'Bob', age: 30 },
+        { id: 3, name: 'Charlie', age: 22 },
+        { id: 4, name: 'David', age: 28 },
+    ];
+    
     new DragTable("test", {
         tableData: data,
         drag: function (e) { },
@@ -26,11 +33,10 @@ https://cdn.jsdelivr.net/gh/allenstu6311/dragTable/cdn.js
 </code>
 </pre>
 
-<pre>
-<code>
+```html
+
   <table id="test" border="1" class="gridtable">
         <thead></thead>
         <tbody></tbody>
-    </table>
-</code>
-</pre>
+  </table>
+
